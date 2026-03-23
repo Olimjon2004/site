@@ -1,3 +1,4 @@
+/* Body and basic elements */
 body {
     margin: 0;
     padding: 0;
@@ -20,9 +21,10 @@ h1 {
 h2 {
     font-weight: normal;
     margin: 30px 0 0;
-    color: #00abff
+    color: #00abff;
 }
 
+/* Layout */
 #content {
     float: left;
     width: 60%;
@@ -34,10 +36,11 @@ h2 {
     width: 30%;
     padding: 10px;
     background: #6e6c6c;
-    height: 100%;
     border-radius: 8px;
+    min-height: 400px;
 }
 
+/* Dates */
 p.date {
     color: #73c7c7;
     font-family: georgia, serif;
@@ -45,28 +48,73 @@ p.date {
     font-style: italic;
 }
 
-/* pagination */
-.pagination {
-    margin: 40px 0;
-    font-weight: bold;
+/* Posts */
+.post, .flex-post {
+    border: 1px solid #626273;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    background-color: #4e4d57;
 }
 
-/* forms */
+.post:hover, .flex-post:hover {
+    background-color: #51515b;
+}
+
+/* Flex post specific */
+.flex-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.post-text {
+    width: 65%;
+    padding-right: 15px;
+}
+
+.post-image {
+    width: 30%;
+}
+
+.post-image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Standard post images */
+.post img.post-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: block;
+}
+
+.post-detail-img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    margin: 15px 0;
+    display: block;
+}
+
+/* Forms */
 label {
-    float: left;
-    clear: both;
+    display: block;
     color: #ffffff !important;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 input, textarea {
-    clear: both;
-    float: left;
-    margin: 0 0 10px;
+    width: 100%;
+    margin-bottom: 10px;
     background: #ededed;
     border: 0;
     padding: 6px 10px;
     font-size: 12px;
+    border-radius: 5px;
 }
 
 input[type=submit] {
@@ -76,44 +124,43 @@ input[type=submit] {
     padding: 10px 20px;
     font-size: 14px;
     text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.errorlist {
-    color: #cc0033;
-    float: left;
-    clear: both;
-    padding-left: 10px;
+input[type=submit]:hover {
+    background-color: #0088cc;
 }
 
-/* comments */
+/* Comments */
 .comment {
-    margin:8px;
+    margin: 8px 0;
     padding: 10px;
-    /*background-color: ;*/
     border: 2px solid #E2E0D4;
     border-radius: 15px;
     color: #000;
-    /*box-shadow: 10px 10px 10px rgba(135, 165, 218, 0.74)*/
+    background-color: #d9d9d9;
 }
-
-/*.comment:nth-child(even) {*/
-/*    background: #efefef;*/
-/*}*/
 
 .comment .info {
     font-weight: bold;
     font-size: 12px;
-    /*color: #fc0202;*/
 }
-.post {
-    border: 1px solid #626273;
-    padding: 10px;
-    border-radius: 5px;
-    margin:5px;
+
+/* Responsive images in comments */
+.comment img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 5px;
 }
-.post:hover {
-    background-color: #51515b;
+
+/* Pagination */
+.pagination {
+    margin: 40px 0;
+    font-weight: bold;
 }
+
+/* Paragraphs */
 p {
     color: white;
 }
